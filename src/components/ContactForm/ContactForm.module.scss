@@ -1,0 +1,155 @@
+.container{
+    padding:70px 200px ;
+    padding-bottom: 200px;
+
+}
+
+.containerForm{
+    // outline: 1px solid red;
+    padding: 20px 130px;
+    width: 100%;
+    // height: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.17);
+    border-radius: 15px;
+    .mainLabel{
+        font-family: ManropeExtraBold;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 33px;
+        line-height: 64px;
+        /* identical to box height, or 194% */
+
+        text-align: center;
+        font-feature-settings: 'liga' off;
+
+        /* Text / Gray 900 */
+        padding: 30px 0;
+        color: #18191F;
+        
+    }
+    .containerFormInner{
+        display: flex;
+        flex-direction: column;
+    }
+    .forms{
+        width: 100%;
+        display: flex;
+        
+        .left{
+            width: 50%;
+            display: flex;
+            padding-right: 20px;
+            
+        }
+        .right{
+            padding-left: 20px;
+
+            width: 50%;
+            display: flex;
+        }
+        .right, .left{
+            flex-direction: column;
+            .input{
+                padding: 20px 0px;
+                label{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 5px;
+                    font-family: RalewaySemiBold;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16.8252px;
+                    line-height: 20px;
+                    color: #868686;
+                    img{
+                        width:26.92px;
+                        height:26.92px;
+                        margin-right: 10px;
+                    }
+                }
+                input{
+                    width: 100%;
+                    outline: none;
+                    border:none;
+                    height: 40px;
+                    // padding: 0;
+                    border-bottom:2px solid #C9C9C9;
+                    transition: border-bottom 1s ease;
+                    font-family: RalewaySemiBold;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 19.0686px;
+                    line-height: 22px;
+                    &:focus{
+                        border-bottom:2px solid #1a1cb8;
+    
+                    }
+                }
+            }
+           
+        
+        }
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        padding:20px 0;
+        button{
+            transition: background-color .5s ease;
+            padding: 10px 50px;
+            background-color: #253089;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            font-family: ManropeBold;
+            color: white;
+            &:hover{
+                cursor: pointer;
+            background-color: #3c489e;
+
+            }
+        }
+    }
+}
+@media only screen  and(max-width:1190px){
+    .container{
+        padding:70px 100px ;
+        padding-bottom: 200px;
+    
+    }
+}
+@media only screen  and(max-width:962px){
+    .container{
+        padding:70px 100px ;
+        padding-bottom: 200px;
+    
+    }
+    .containerForm{
+        .mainLabel{
+            font-size: 24px;
+        }
+        padding: 20px 20px;
+        .forms{
+            flex-direction: column;
+            .left{
+                width: 100%;
+                padding-right: 0;
+                
+            }
+            .right{
+                width: 100%;
+
+                padding-left: 0;
+            }
+        }
+    }
+    
+}
+@media only screen  and(max-width:687px){
+    .container{
+        padding:70px 20px ;
+        padding-bottom: 100px;
+    
+    }
+}

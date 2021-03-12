@@ -1,0 +1,96 @@
+.container{
+    padding: 30px 70px;
+    padding-bottom: 60px;
+    @keyframes toUp{
+        from{
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+      }
+      animation: toUp .7s ease;
+    .heading{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: ManropeExtraBold;
+        font-weight: 800;
+        font-size: 37.48px;
+        line-height: 123%;
+        /* or 46px */
+        padding: 60px 0;
+        letter-spacing: 0.04em;
+
+        color: #253089;
+    }
+    
+    
+    .links{
+        justify-content: space-around;
+        width: 100%;
+        padding: 0 70px;
+        display: flex;
+        list-style: none;
+        li{
+            a{
+                transition: all .9s ease;
+                font-family: ManropeMedium;
+                background: #FFFFFF;
+                border: 0.5px solid rgba(0, 0, 0, 0.6);
+                box-sizing: border-box;
+                box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                padding: 13px 70px;
+                text-decoration: none;
+                color: #3A3A3A;
+                letter-spacing: 0.04em;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 123%;
+            }
+        }
+    }
+}
+.active{
+    border: 0.5px solid #FF7700!important;
+    background: #FF7700!important;
+    color: white!important;
+}
+
+@media only screen and(max-width:1190px){
+    .container{
+        .links{
+            padding: 0;
+            li{
+                a{
+                    
+                    padding: 10px 40px;
+                    font-size: 20px;
+                    // line-height: 123%;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and(max-width:962px){
+    .container{
+        padding: 30px 0px;
+        padding-bottom: 60px;
+        .links{
+            padding: 0;
+            li{
+                a{
+                    
+                    padding: 8px 30px;
+                    font-size: 14px;
+                    // line-height: 123%;
+                }
+            }
+        }
+    }
+}

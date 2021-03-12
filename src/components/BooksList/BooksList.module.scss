@@ -1,0 +1,40 @@
+.container{
+    padding: 40px 60px;
+    width: 100%;
+    // outline: 1px solid red;
+    border-radius: 100px;
+    background: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.col{
+    justify-content: center;
+    display: flex;
+    width: calc(100%/3);
+    // background-color: #F3F3F3;
+}
+
+@media only screen and(max-width:1190px){
+    .container{
+        border-radius: 60px;
+    }
+    .col{
+        width: calc(100%/2);
+    }
+}
+@media only screen and(max-width:962px){
+    .container{
+        border-radius: 30px;
+    }
+    .col{
+        
+        width: 100%;
+    }
+}
+@media only screen and(max-width:567px){
+    .container{
+        padding: 40px 10px;
+    }
+}

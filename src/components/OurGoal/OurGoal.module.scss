@@ -1,0 +1,106 @@
+.container{
+    padding: 0 70px;
+    padding-bottom: 60px;
+    margin-top: -60px;
+    display: flex;
+}
+.img{
+    display: flex;
+    width: 500px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    justify-content: center;
+    .heading{
+        display: flex;
+        font-family: ManropeExtraBold;
+        margin-bottom: 30px;
+        font-weight: 800;
+        font-size: 33px;
+        line-height: 57px;
+        /* identical to box height, or 174% */
+
+        font-feature-settings: 'liga' off;
+
+        /* Text / Gray 900 */
+
+        color: #18191F;
+
+    }
+    .description{
+        font-family: ManropeRegular;
+        font-weight: normal;
+        font-size: 19.1351px;
+        line-height: 34px;
+        /* or 178% */
+
+        font-feature-settings: 'liga' off;
+
+        /* Text / Gray 900 */
+
+        color: #18191F;
+
+    }
+}
+
+@media only screen and(max-width:1190px){
+    .img{
+        width: 340px;
+    }
+    .content{
+        padding-left: 30px;
+        .heading{
+            font-weight: 800;
+            font-size: 21.2247px;
+            line-height: 39px;
+            /* identical to box height, or 183% */
+
+            font-feature-settings: 'liga' off;
+
+            /* Text / Gray 900 */
+
+            color: #18191F;
+        }
+        .description{
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 23px;
+            /* or 193% */
+
+            font-feature-settings: 'liga' off;
+
+            /* Text / Gray 900 */
+
+            color: #18191F;
+        }
+    }
+}
+
+@media only screen and(max-width:962px){
+    .container{
+        // padding: 0 20px;
+        padding-bottom: 60px;
+        margin-top: -60px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .img{
+        width: 100%;
+        // margin: 0 auto;
+    }
+    .content{
+        margin-top: 20px;
+        padding-left: 10px;
+        .heading{
+            margin-bottom: 20px;
+        }
+    }
+}
+@media only screen and(max-width:742px){
+    .container{
+        padding: 0 40px;
+    }
+}

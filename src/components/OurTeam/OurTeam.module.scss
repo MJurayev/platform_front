@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title{
+        font-family: ManropeExtraBold;
+        display: flex;
+        text-align: center;
+        font-weight: 800;
+        font-size: 37.48px;
+        line-height: 123%;
+        /* or 46px */
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 0.04em;
+
+        color: #253089;
+
+    }
+    .slayder{
+
+    }
+}

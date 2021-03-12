@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face{
+  font-family: Manrope ;
+  src:url('./assets/fonts/Manrope-SemiBold.ttf')
+}
+@font-face{
+  font-family: ManropeExtraBold;
+  src:url('./assets/fonts/Manrope-ExtraBold.ttf')
+}
+@font-face{
+  font-family: ManropeLight;
+  src:url('./assets/fonts/Manrope-Light.ttf')
+}
+@font-face{
+  font-family: ManropeMedium;
+  src:url('./assets/fonts/Manrope-Medium.ttf')
+}
+@font-face{
+  font-family: ManropeRegular;
+  src:url('./assets/fonts/Manrope-Regular.ttf')
+}
+@font-face{
+  font-family: ManropeSemiBold;
+  src:url('./assets/fonts/Manrope-SemiBold.ttf')
+}
+@font-face{
+  font-family: ManropeBold;
+  src:url('./assets/fonts/Manrope-Bold.ttf')
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face{
+  font-family: RalewaySemiBold;
+  src:url('./assets/fonts/Raleway/Raleway-SemiBold.ttf')
+}
+*, *::after, *::before{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+*::selection{
+  color: white;
+  background-color: #FF7700;
+}
+body{
+  font-family: Manrope;
+  overflow-x: hidden;
+  
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  
+}
+::-webkit-scrollbar-track{
+  background-color: white;
+  box-shadow: inset 0 0 4px rgb(110, 110, 110);
+}
+::-webkit-scrollbar-thumb{
+  background-color: #253089;
+  border-radius: 10px;
 }

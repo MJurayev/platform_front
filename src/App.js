@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import st from "./App.module.scss";
+import Home from './pages/Home/Home'
+import Navbar from './components/Navbar/Navbar'
+import { BrowserRouter as Router, Switch,Route } from "react-router-dom";
 
+import Contacts from "./pages/Contacts/Contacts";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import LoginRegister from "./pages/LoginRegister/LoginRegister";
+import Mundarija from "./pages/Mundarija/Mundarija";
+
+
+import Temp from "./TempComponents/Temp";
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={st.container}>
+      <Router>
+        <Switch>
+          <Route  path='/home' ><Home /></Route>
+          <Route  path='/contact' ><Contacts /></Route>
+          <Route  path='/about' ><AboutUs /></Route>
+          <Route  path='/login' ><LoginRegister /></Route>
+          <Route path='/mundarija' ><Mundarija /></Route>
+
+          {/* The test component Route */}
+          <Route path='/component' ><Temp /></Route>
+          
+        </Switch>
+      </Router>
     </div>
   );
 }

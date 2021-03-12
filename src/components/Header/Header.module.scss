@@ -1,0 +1,90 @@
+@keyframes toUp{
+        from{
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+      }
+
+.container{
+    display: flex;
+    padding:10px 60px;
+    padding-bottom: 100px;
+    animation: toUp .7s ease;
+
+    .welcome{
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        padding:20px 0px 0px 0px;
+        .title{
+            font-size: 37.47px;
+            font-weight: 900;
+            font-family: ManropeExtraBold;
+            margin: 10px 0;
+        }
+        .description{
+            width: 80%;
+            font-size: 18px;
+            margin: 10px 0;
+            font-family: ManropeRegular;
+        }
+        button{
+            display: flex;
+            position: relative;
+            align-items: center;
+            margin-top: 40px;
+            width: min-content;
+            border: none;
+            // background-color: red;
+            background-color: #253089;
+            color: white;
+            font-family: ManropeBold;
+            font-size: 20px;
+            padding: 10px 70px;
+            &:hover img{
+                transform: translateX(0);
+                opacity: 1;
+            }
+            img{
+                transition: all .4s ease;
+                transform: translateX(-15px);
+
+                opacity: 0;
+                right: 35px;
+                position: absolute;
+                // margin-right: 30px;
+                display: flex;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+            
+        }
+    }
+}
+
+@media only screen and(max-width:962px){
+    .container{
+        // padding:0 50px;
+        
+        padding: 50px 35px;
+        flex-direction: column-reverse;
+        .welcome{
+            // margin-top: 10px;
+            align-items: center;
+            padding:0;
+            .title{
+                text-align: center;
+                font-size: 24px;
+            }
+            .description{
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,248 @@
+.container{
+    background-color: #253089;
+
+}
+.footer1{
+    padding: 40px 60px;
+    padding-bottom: 10px;
+    color: white;
+    justify-content: space-between;
+    display: flex;
+    .sitemap{
+        display: flex;
+        flex-direction: column;
+        // margin-right: auto;
+        .logo{
+            padding: 15px 0;
+            font-family: ManropeExtraBold;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 23px;
+            line-height: 26px;
+            font-feature-settings: 'liga' off;
+        }
+        .footerNavbar{
+            width: max-content;
+            padding: 15px 0;
+            list-style: none;
+            display: flex;
+            li{
+                font-family: ManropeRegular;
+                display: flex;
+                padding-right: 20px;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 26px;
+                font-feature-settings: 'liga' off;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }            
+        }
+        .description{
+            font-family: ManropeLight;
+            width: 400px;
+            padding: 15px 0;
+            // font-family: Manrope;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 18px;
+            /* or 138% */
+
+            font-feature-settings: 'liga' off;
+
+            color: rgba(255, 255, 255, 0.7);
+            // margin:  10px 0;
+        }
+    }
+
+    .centered{
+        width: max-content;
+    }
+    .contact_section{
+        width: 300px;
+    }
+    .phone, .email{
+        color: yellow;
+    }
+    .footer_section{
+        
+        display: flex;
+        flex-direction: column;
+        // margin: 0 50px;
+        .heading{
+            display: flex;
+            font-family: ManropeRegular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14.0474px;
+            line-height: 25px;
+            /* identical to box height, or 178% */
+            color: #8C97AC;
+            margin-bottom: 20px;
+        }
+        .items{
+            display: flex;
+            flex-direction: column;
+        justify-content: space-around;
+        
+            .item{
+                margin: 4px 0 ;
+                font-family: ManropeRegular;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12.4866px;
+                line-height: 33px;
+                /* or 263% */
+    
+    
+                color: #E9F7FE;
+    
+            }
+            .phone, .email{
+                color: #FFD166;
+            }
+        }
+        
+    }
+    
+}
+.footer2{
+    color: white;
+    padding:20px 60px;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .copyright{
+        display: flex;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        /* identical to box height, or 171% */
+        font-family: ManropeRegular;
+        font-feature-settings: 'liga' off;
+
+        /* Text / Gray 300 */
+
+        color: #D9DBE1;
+    }
+    .socialLinks{
+        display: flex;
+        img{
+            $size : 40px;
+            width: $size;
+            height: $size;
+            transition: all .2s ease;
+            &:hover{
+                cursor: pointer;
+                opacity: .7;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1190px){
+    .footer1{
+        .sitemap{
+            .logo{
+                font-size: 18px;
+                line-height: 14px;
+            }
+            .footerNavbar{
+                li{
+                    font-size: 13px;
+                    line-height: 14px;
+                }
+            }
+            .description{
+                display: none;
+            }
+        }
+        .contact_section{
+            width: 170px;
+        }
+        .footer_section{
+            .heading{
+                font-size: 13px;
+            }
+            .items{
+                .item{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:962px){
+    .footer1{
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        .sitemap{
+            width: 100%;
+            align-items: center;
+            .description{
+                display: flex;
+                width: 300px;
+                font-weight: 300;
+                font-size: 17px;
+                line-height: 18px;
+                /* or 138% */
+
+                text-align: center;
+                font-feature-settings: 'liga' off;
+
+color: rgba(255, 255, 255, 0.7);
+                align-items: center;
+                text-align: center;
+            }
+            .logo{
+                text-align: center;
+                align-items: center;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 23px;
+                line-height: 26px;
+            }
+            .footerNavbar{
+                display: none;
+            }
+            
+        }
+        
+        .footer_section{
+            display: none;
+            .heading{
+                display: none;
+            }
+            .items{
+                .item{
+                    display: none;
+                }
+                .email,.phone{
+                    display: flex;
+                    justify-content: center;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16;
+                    line-height: 22px;
+/* or 175% */
+
+text-align: center;
+
+color: #FFD166;
+                }
+            }
+        }
+        .contact_section{
+            display: flex;
+            width: 170px;
+        }
+    }
+}

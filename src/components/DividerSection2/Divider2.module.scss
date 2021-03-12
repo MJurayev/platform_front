@@ -1,0 +1,38 @@
+.container{
+    z-index: -1;
+    margin-top: -150px;
+    margin-bottom: -10px;
+    width: 100%;
+    position: relative;
+    $rotate :9deg;
+    overflow: hidden;
+    height: 300px;
+    img{
+        width: 100%;
+        position: absolute;
+        top: 0%;
+    }
+    .d1{
+        
+        transform: translateY(8px);
+    }
+    .d2{
+        
+        transform: translateY(0);
+    }
+    .d3{
+        
+        transform: translateY(-8px);
+    }
+
+}
+@media screen and(max-width:962px){
+    .container{
+       img{
+        width: 130%;
+        right: 0;
+        // position: absolute;
+    } 
+    }
+    
+}

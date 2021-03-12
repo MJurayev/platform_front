@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\nodeJs"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\leaderpack.uz"
+		},
+		{
+			"path": "..\\..\\python masala"
+		},
+		{
+			"path": "..\\..\\Mavqut.uz"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "leaderpack.uz"
+	}
+}

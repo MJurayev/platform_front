@@ -1,0 +1,109 @@
+.container{
+    display: flex;
+    margin-top: 110px;
+    img{
+        margin-right:0px;
+        margin-left: -60px;
+    }
+}
+@keyframes toUp{
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+.content{
+    display: flex;
+    padding:0 30px;
+    flex-direction: column;
+    // justify-content: center;
+    .topTitle{
+        // margin-top: 10px;
+        font-family: ManropeRegular;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        /* identical to box height, or 139% */
+        font-feature-settings: 'liga' off;
+        color: #FF7700;
+        margin-bottom: 10px;
+
+    }
+    .title{
+        font-family: ManropeBold;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 131%;
+        /* or 33px */
+
+        letter-spacing: 0.07em;
+
+        color: #253089;
+
+
+    }
+    .description{
+        margin-top: 20px;
+        font-family: ManropeRegular;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        /* or 211% */
+        // text-align: justify;
+        letter-spacing: 0.03em;
+        font-feature-settings: 'liga' off;
+
+        /* Text / Gray 900 */
+
+        color: #18191F;
+    }
+
+}
+
+@media only screen and(max-width:1190px){
+    .container{
+        img{
+            width: 40%;
+            margin-right:0px;
+            margin-left:30px;
+        }
+    }
+    .content{
+        .title{
+            font-size: 24px;
+        }
+        .description{
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media only screen and(max-width:962px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 50%;
+            margin-right:0px;
+            margin-left:30px;
+        }
+    }
+    .content{
+        align-items: center;
+        .title{
+            align-items: center;
+            text-align: center;
+            font-size: 24px;
+        }
+        .description{
+            text-align: center;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}

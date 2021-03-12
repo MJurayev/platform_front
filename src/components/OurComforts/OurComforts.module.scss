@@ -1,0 +1,120 @@
+.container{
+    padding: 10px 70px;
+    flex-direction: column;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    .title{
+        color: #18191F;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        font-size: 33px;
+        text-align: center;
+        font-family: ManropeExtraBold;
+        font-weight: 800;
+        
+    }
+    .description{
+        color: #18191F;
+        max-width:600px;
+        margin-top: 10px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        font-feature-settings: 'liga' off;
+        line-height: 30px;
+        // width: min-content;
+        // height: 20px;
+    }
+}
+
+.comfortLists{
+    display: flex;
+    flex-wrap:wrap;
+//    flex-direction: column;
+    width: 100%;
+}
+
+.comfortsItem{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    // outline: 1px solid red;
+    justify-content: center;
+    height: max-content;
+    width: calc(100%/3);
+    img{
+        display: flex;
+        margin:10px auto;
+    }
+    .heading{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 24px;
+        margin: 10px auto;
+        line-height: 32px;
+        font-family: ManropeBold;
+        /* identical to box height, or 133% */
+        text-align: center;
+        font-feature-settings: 'liga' off;
+        color: #18191F;
+
+    }
+    .descriptionItem{
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 26px;
+        /* or 137% */
+        font-family: ManropeMedium;
+        text-align: center;
+        font-feature-settings: 'liga' off;
+
+        /* Text / Gray 900 */
+
+        color: #18191F;
+
+    }
+}
+
+@media screen and (max-width:1190px){
+    .comfortsItem{
+        width: calc(100%/2);
+    }
+}
+@media screen and (max-width:962px){
+    .container{
+        padding: 10px 30px;
+        // flex-direction: column;
+    }
+    .head{
+        .description{
+            font-size: 17px;
+            width: 400px;
+        }
+    }
+    .comfortsItem{
+    
+        width: 100%;
+        padding: 30px 0px;
+        img{
+            width: 50px;
+        }
+        .heading{
+            font-size: 24px;
+        }
+        .descriptionItem{
+            font-size: 21px;
+        }
+    }
+}
