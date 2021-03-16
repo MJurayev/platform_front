@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import headerImage from '../../assets/img/headerImage.png'
 import ArrowRight from '../../assets/img/arrow_right.png'
 

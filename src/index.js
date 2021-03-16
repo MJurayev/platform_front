@@ -4,10 +4,16 @@ import './index.css';
 import App from './App';
 
 import reportWebVitals from './reportWebVitals';
+import { ServerProvider } from './Contexts/ServerProvider';
+import IsLoginProvider from './Contexts/IsLoginProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <IsLoginProvider>
+    <ServerProvider>
+      <App />
+    </ServerProvider>
+    </IsLoginProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,39 @@
+.container{
+    margin:15px auto;
+    width: 100%;
+    display: flex;
+    padding: 12px 30px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 28px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    transition: background .3s ease;
+    user-select: none;
+    &:hover{
+        cursor: pointer;
+        background: #fafafa;
+    }
+}
+
+.testInfo{
+    font-family: ManropeMedium;
+    font-weight: 500;
+    font-size: 14px;
+    width: 100%;
+    line-height: 161%;
+    /* or 23px */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    
+    color: rgba(0, 0, 0, 0.8);
+}
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    &:hover{
+        cursor: pointer;
+    }
+}
