@@ -14,7 +14,7 @@ export default function Mundarija() {
             <Route path="/mundarija/posters"><PosterList/></Route>
             <Route path="/mundarija/books"><BooksList/></Route>
             <Route path="/mundarija/slides"><SlideList/></Route>
-            <Route path="/mundarija/tests"><TestsList/></Route>
+            <Route exact path="/mundarija/tests"><TestsList/></Route>
         </div>
     )
 }

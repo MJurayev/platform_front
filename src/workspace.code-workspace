@@ -1,19 +1,16 @@
 {
 	"folders": [
 		{
-			"path": "..\\..\\nodeJs"
-		},
-		{
 			"path": ".."
 		},
 		{
-			"path": "..\\..\\leaderpack.uz"
+			"path": "..\\..\\nodeJs"
+		},
+		{
+			"path": "..\\..\\..\\23tv"
 		},
 		{
 			"path": "..\\..\\python masala"
-		},
-		{
-			"path": "..\\..\\blog.jurayev.uz"
 		}
 	],
 	"settings": {

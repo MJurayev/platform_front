@@ -1,0 +1,257 @@
+.container{
+    padding: 30px 120px;
+    padding-bottom: 100px;
+}
+
+.box{
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 37px rgba(0, 0, 0, 0.05);
+    border-radius: 26px;
+    padding: 70px 90px;
+    position: relative;
+    overflow: hidden;
+}
+.box::after{
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0%;
+    /* transform: translateX(-50%); */
+    background-color: #FF7700;
+    box-shadow: 0 0px 10px #ff7700b2;
+    border-bottom-right-radius:20px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    padding: 5px 20px;
+    padding-left: 40px;
+}
+
+.questionNumber{
+    padding: 10px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: rgba(0, 0, 0, 0.7);
+
+}
+
+.question{
+    padding: 13px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 25px;
+
+    color: rgba(0, 0, 0, 0.7);
+
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.answerItem{
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.answerItem input[type="radio"]{
+    /* margin-right: 30px; */
+    position: relative;
+    /* background-color:  #FF7700; */
+    width: 20px;
+    -webkit-appearance: none;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.answerItem input[type="radio"]:after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid  #FF7700;
+}
+.answerItem input[type="radio"]::before{
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: background .3s ease-out;
+}
+
+.answerItem input[type="radio"]:checked::before{
+    animation: radioAnime .2s ease-in;
+    background-color: #FF7700;
+}
+@keyframes radioAnime{
+    from {
+        width: 20px;
+        height: 20px;
+    }
+    to{
+        width: 13px;
+    height: 13px;
+    }
+}
+
+.answerItem label{
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 25px;
+    /* identical to box height */
+    padding-left: 30px;
+
+    color: rgba(0, 0, 0, 0.7);
+
+}
+.answerItem label:hover{
+    cursor: pointer;
+}
+
+.controlButtons{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+.controlButtons button,.controlButtons a{
+    user-select: none;
+    text-decoration: none;
+    background: #FF7700;
+    transition: background .2s ease;
+    box-shadow: 0px 0px 36px rgba(255, 201, 64, 0.15);
+    border-radius: 61px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin:0 10px;
+    padding: 10px 20px;
+    min-width: 130px;
+    min-height: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.controlButtons button:hover,.controlButtons a:hover{
+    background: #db6905;
+}
+.controlButtons button:disabled{
+    
+    background: #e4ac7c;
+    cursor: not-allowed;
+}
+.controlButtons button:first-child{
+    margin-left: auto;
+}
+.controlButtons button:nth-child(3){
+    /* display: none; */
+    background-color: red;
+    margin-left: auto;
+}
+
+.quizCounter{
+    display: flex;
+    padding: 30px 0;
+}
+.quizCounter>div{
+    margin: 5px;
+    user-select: none;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+.quizCounter>div:hover{
+    background: #fbfbfb;
+}
+
+.quizCounter>div.current{
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+    background-color: #253089;
+    color: white;
+}
+
+
+
+
+.resultOverlay{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000b4;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 37px rgba(0, 0, 0, 0.05);
+    border-radius: 26px;
+}
+
+.resultChart{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #2FFF0D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.resultChart .inner{
+    width: 160px;
+    border-radius: 50%;
+    height: 160px;
+    background-color: white;
+}

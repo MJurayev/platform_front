@@ -37,7 +37,7 @@ export default function LoginModal({isOpen,disableModal}) {
         opacity:isOpen ? 1:0,
         transform:isOpen ? 'translateY(0)': 'translateY(100px)'
     }
-
+    
     return (
        <>
            <div style={ modalBoxStyle } className={st.container}>
@@ -48,7 +48,7 @@ export default function LoginModal({isOpen,disableModal}) {
                 <div style={modalStyle} className={st.box}>
                     <div className={st.modalHeader}>Kirish</div>
                     <input ref={emailRef} type="text" placeholder="Email" required/>
-                    <input ref={passwordRef} type="text" placeholder="Parol" required/>
+                    <input ref={passwordRef} type="password" placeholder="Parol" required/>
                     <button onClick={onSubmitHandle}>Kirish</button>
                     {/* <div className={st.helpLogin}>Siz registratsiyadan o’tmaganmisiz unda <p className={st.signUp}> Sign up</p></div> */}
                 </div>

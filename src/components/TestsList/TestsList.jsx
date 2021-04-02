@@ -28,7 +28,7 @@ export default function TestsList() {
             <div className={st.containerTests}>
                 {
                     tests.map((x, key)=>{
-                        return <Link key={key} to={`/mundarija/test-open/${x._id}`}><TestItem key={key} test={x}/></Link>
+                        return <Link key={key} to={`/quiz/${x._id}`}><TestItem key={key} test={x}/></Link>
                     })
                 }
                 

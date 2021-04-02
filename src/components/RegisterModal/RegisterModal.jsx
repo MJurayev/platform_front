@@ -98,7 +98,7 @@ const modalStyle = {
                         <div style={{width:'100%'}}>
                             <div className={st.modalHeader}>Ro'yxatdan o'tish</div>
                             <input type="text" ref={nameRef}   placeholder="Ismingiz" required/>
-                            <input type="eamil" ref={emailRef}  placeholder="Email" required/>
+                            <input type="email" ref={emailRef}  placeholder="Email" required/>
                             <input type="password" ref={passwordRef} placeholder="Parol..." required/>
                             <input type="password" ref={passwordRef2} placeholder="Parol tasdiqlang..." required/>
                             <button onClick={onSubmitHandle}> Ro'yxatdan o'tish</button>
