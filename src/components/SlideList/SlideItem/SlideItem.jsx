@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import st from './SlideItem.module.scss'
 import downloadIcon from "../../../assets/img/downloadBook.png";
 import showIcon from "../../../assets/img/watchIcon.png";
-import poster from "../../../assets/img/AboutHeaderImage.png"
-export default function SlideItem() {
+import { useServer } from '../../../Contexts/ServerProvider';
+export default function SlideItem({info}) {
+    const {server} = useServer()
+    useEffect(()=>{
+        console.log(info)
+    }, [])
     return (
         <div className={st.container}>
             <div className={st.box}>
-                <img src={poster} alt=""/>
-                <div className={st.slug}>Bizning platformamizga xush kelibsiz platformamizga </div>
+                <img src={`${server}/api/slide/image/${info._id}`} alt=""/>
+                <div className={st.slug}>{info.name}</div>
                 <div className={st.actions}>                
-                    <div className={st.show}><img src={showIcon} alt=""/> </div>
-                    <div className={st.download}><img src={downloadIcon} alt=""/> </div>
+                    <a  className={st.show}><img src={showIcon} alt=""/> </a>
+                    <a href={`${server}/api/slide/${info._id}`} className={st.download}><img src={downloadIcon} alt=""/> </a>
                 </div>
             </div>
         </div>

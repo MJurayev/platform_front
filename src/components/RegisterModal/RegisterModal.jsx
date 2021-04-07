@@ -111,7 +111,7 @@ const modalStyle = {
                             <button onClick={veryfication}> Tasdiqlash</button> 
                         </div>
                     )}
-                    <div className={st.helpLogin}>Siz  o’tganmisiz unda <p className={st.signUp}> Login</p></div>
+                    
                 </div>
             </div> 
        </>

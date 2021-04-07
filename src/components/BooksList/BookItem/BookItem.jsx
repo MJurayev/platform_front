@@ -13,8 +13,9 @@ export default function BookItem({bookInfo}) {
                 <div className={st.slug}>{bookInfo.name} </div>
                 <div className={st.actions}>
                 <a href={`${server}/api/books/${bookInfo._id}`} className={st.btn}>Yuklab olish <img src={downloadIcon} alt=""/></a>
-                <a href={`${server}/api/books/open/${bookInfo._id}`} className={st.show}><img src={showIcon} alt=""/> </a>
+                <a href={`/view?file=${server}/api/books/open/${bookInfo._id}`} className={st.show}><img src={showIcon} alt=""/> </a>
                 </div>
+         
             </div>
         </div>
     )

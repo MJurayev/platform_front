@@ -4,7 +4,7 @@ import SlideItem from './SlideItem/SlideItem'
 import axios from 'axios'
 import { useServer } from '../../Contexts/ServerProvider'
 export default function SlideList() {
-    const [slides, setSlides] = useState()
+    const [slides, setSlides] = useState([])
     const {server} = useServer()
     const getSlides=()=>{
         axios.get(`${server}/api/slide`, {
@@ -22,33 +22,15 @@ export default function SlideList() {
         getSlides()
 
         console.log(slides)
-    })
+    }, [])
     return (    
         <div className={st.container}>
-            <div className={st.col}>
-            <SlideItem />
-            </div>
-
-            <div className={st.col}>
-            <SlideItem />
-            </div>
-            <div className={st.col}>
-            <SlideItem />
-            </div>
-
-            <div className={st.col}>
-            <SlideItem />
-            </div>
-
-            <div className={st.col}>
-            <SlideItem />
-            </div>
-            <div className={st.col}>
-            <SlideItem />
-            </div>
-            {/* <Route path="/mundarija/posters" >POster</Route>               
-                <Route path="/mundarija/slides" >Slide</Route>               
-                <Route path="/mundarija/books" >Book</Route>   */}
+            {slides.map((item, key)=>{
+                return <div key={key}  className={st.col}>
+                        <SlideItem info={item} />
+                    </div>
+                })
+            }
         </div>
     )
 }

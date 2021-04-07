@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useIsLoggedIn } from '../../Contexts/IsLoginProvider'
+import UnAutorized from '../UnAutorized/UnAutorized'
 import st from './MundarijaHeader.module.scss'
 export default function MundarijaHeader() {
     const {isLoggedIn} = useIsLoggedIn()
@@ -13,7 +14,7 @@ export default function MundarijaHeader() {
                     <li><NavLink activeClassName={st.active}  to="/mundarija/slides">Slaydlar</NavLink></li>
                     <li><NavLink activeClassName={st.active}  to="/mundarija/books">Kitoblar</NavLink></li>
                     <li><NavLink activeClassName={st.active}  to="/mundarija/tests">Testlar</NavLink></li>
-                </ul> : " Login qiling yoki Registratsiyadan o'ting"}     
+                </ul> : <UnAutorized />}     
         </div>
     )
 }

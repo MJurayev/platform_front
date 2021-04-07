@@ -46,7 +46,7 @@ export default function Quiz() {
     }
     const reattempt=()=>{
       setResult(false)
-     
+      setCurrentQuestion(0)
      
      clearAnswers()
     }

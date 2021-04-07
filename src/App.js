@@ -9,6 +9,7 @@ import LoginRegister from "./pages/LoginRegister/LoginRegister";
 import Mundarija from "./pages/Mundarija/Mundarija";
 import Quiz from "./pages/Quiz/Quiz";
 import Footer from "./components/Footer/Footer";
+import Viewer from "./pages/Viewer/Viewer";
 function App() {
   
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route  path='/about' ><AboutUs /></Route>
           <Route  path='/login' ><LoginRegister /></Route>
           <Route  path='/mundarija' ><Mundarija /></Route>
+          <Route  path='/view' ><Viewer/></Route>
           <Route exact path='/quiz/:id'><Quiz/></Route>
 
       <Footer />
