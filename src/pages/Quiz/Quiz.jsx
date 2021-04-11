@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { useLocation, useParams } from 'react-router'
+import {useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import { useServer } from '../../Contexts/ServerProvider'
 import st from './Quiz.module.css'

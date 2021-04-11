@@ -5,9 +5,9 @@ import axios from 'axios'
 import { useServer } from '../../Contexts/ServerProvider'
 export default function SlideList() {
     const [slides, setSlides] = useState([])
-    const {server} = useServer()
-    const getSlides=()=>{
-        axios.get(`${server}/api/slide`, {
+    const { server } = useServer()
+    async function getSlides(){
+        await axios.get(`${server}/api/slide`, {
             headers:{
                 'Content-type':'application/json',
                 'x-auth-token':localStorage.getItem('x-auth-token')
@@ -17,13 +17,13 @@ export default function SlideList() {
         }).catch((err)=>{
             console.log(err)
         })
+        console.log('updateing')
     }
+    
     useEffect(()=>{
         getSlides()
-
-        console.log(slides)
     }, [])
-    return (    
+    return (
         <div className={st.container}>
             {slides.map((item, key)=>{
                 return <div key={key}  className={st.col}>
