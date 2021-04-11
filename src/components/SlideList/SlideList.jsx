@@ -6,7 +6,7 @@ import { useServer } from '../../Contexts/ServerProvider'
 export default function SlideList() {
     const [slides, setSlides] = useState([])
     const { server } = useServer()
-    async function getSlides(){
+    const getSlides=async ()=>{
         await axios.get(`${server}/api/slide`, {
             headers:{
                 'Content-type':'application/json',
@@ -14,14 +14,15 @@ export default function SlideList() {
             }
         }).then((res)=>{
             setSlides(res.data)
+            console.log('updateing')
         }).catch((err)=>{
             console.log(err)
         })
-        console.log('updateing')
+       
     }
     
     useEffect(()=>{
-        getSlides()
+        getSlides();
     }, [])
     return (
         <div className={st.container}>

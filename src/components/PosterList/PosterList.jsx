@@ -6,8 +6,8 @@ import axios from 'axios'
 export default function PosterList() {
     const { server } = useServer()
     const [posters, setPosters] = useState([])
-    const getPosters=()=>{
-        axios.get(`${server}/api/poster`, {
+    const getPosters=async ()=>{
+         await axios.get(`${server}/api/poster`, {
             headers:{
                 'Content-type':'application/json',
                 'x-auth-token':localStorage.getItem('x-auth-token')
@@ -20,7 +20,7 @@ export default function PosterList() {
     }
     useEffect(()=>{
         getPosters()
-    })
+    }, [])
     return (    
         <div className={st.container}>
             {posters.map((item, key)=>{

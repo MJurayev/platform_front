@@ -20,7 +20,7 @@ export default function BooksList() {
     }
     useEffect(()=>{
         getBooks()
-    })
+    },[])
     return (    
         <div className={st.container}>
            {books.map((book, key)=>{
