@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import st from './Navbar.module.scss'
 import telegram from '../../assets/img/telegram.png'
 import instagram from '../../assets/img/instagram.png'
 import facebook from '../../assets/img/facebook.png'
+import logo from '../../assets/img/LOGO.png'
+import logo2 from '../../assets/img/LOGO2.png'
 import { Link, NavLink } from 'react-router-dom'
 import LoginModal from '../LoginModal/LoginModal'
 import RegisterModal from '../RegisterModal/RegisterModal'
@@ -39,6 +41,7 @@ export default function Navbar() {
     return (
         <>
             <div className={st.navbarTop}>
+            <div className={`${st.logo} ${st.logoMobile}` }><img style={{height:'100%'}} src={logo2} /></div>
                 <LoginModal disableModal={disableLoginModal} isOpen={loginIsOpen}/>
                 <RegisterModal disableModal={disableRegisterModal} isOpen={RegisterIsOpen} />
                 <div className={st.socialLinks}>
@@ -49,18 +52,19 @@ export default function Navbar() {
                {!isLoggedIn ? <div className={st.authLinks}>
                     <Link className={st.signUp} onClick={()=>{setRegisterIsOpen(true)}} to="#" >Ro'yxatdan o'tish</Link>
                     <Link className={st.signIn} onClick={()=>{setLoginIsOpen(true)}} to="#" >Kirish</Link>
-                </div> :"s"}
+                </div> :"Foydalanuvchi"}
                 <div  onClick={onClickNavToggle} className={(toggle ? st.closeToggle : '')+" "+st.toggle}>
                     <span></span>
                 </div>
             </div>
             <div className={st.navbarSecond + " close_navbar "+ (!toggle ?  st.noneOverlay:'')}>
-            
+                <div className={st.logo}><img style={{height:'100%'}} src={logo} /></div>
                 <ul className={ (!toggle?  st.closeNavbar : '')+ " "+st.navbar}>
                     {!isLoggedIn ? <div className={st.authLinks+" "+st.mobileAuth}>
                         <Link className={st.signUp+ " close_navbar"} onClick={()=>{setRegisterIsOpen(true)}}  to="#" >Ro'yxatdan o'tish</Link>
                         <Link className={st.signIn+ " close_navbar"} onClick={()=>{setLoginIsOpen(true)}} to="#" >Kirish</Link>
                     </div> :"s" }
+
                     <li  className={st.navlink+ " close_navbar"}> <NavLink activeClassName={st.active} to='/home' >Bosh sahifa</NavLink> </li>
                     <li className={st.navlink+ " close_navbar"}> <NavLink activeClassName={st.active} to='/about' >Biz haqimizda</NavLink> </li>
                     <li className={st.navlink+ " close_navbar"}> <NavLink activeClassName={st.active} to='/mundarija' >Mundarija</NavLink> </li>

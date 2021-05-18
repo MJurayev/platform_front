@@ -52,7 +52,7 @@
             img{
                 transition: all .4s ease;
                 transform: translateX(-15px);
-
+                
                 opacity: 0;
                 right: 35px;
                 position: absolute;
@@ -64,6 +64,10 @@
             }
             
         }
+    }
+    &>img{
+        margin: auto;
+        height: 50vh;
     }
 }
 

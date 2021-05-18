@@ -4,12 +4,14 @@ import telegram from '../../assets/img/telegram.png'
 import instagram from '../../assets/img/instagram.png'
 import facebook from '../../assets/img/facebook.png'
 import st from './Footer.module.scss'
+import logo2 from '../../assets/img/LOGO2.png'
+
 export default function Footer() {
     return (
     <div className={st.container}>
         <div className={st.footer1}>
             <div className={st.sitemap}>
-                <div className={st.logo}>LOGO</div>
+                <div className={st.logo}><img src={logo2} /></div>
                 
                 <ul className={st.footerNavbar}>
                     <li><Link to="/home">Biz haqimizda</Link></li>

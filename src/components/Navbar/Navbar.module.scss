@@ -5,6 +5,13 @@
 .mobileAuth{
     display: none!important;
 }
+.logo{
+    margin-right: auto;
+    display: flex;
+}
+.logoMobile{
+    display: none;
+}
 .navbarTop{
 
     width:100%;
@@ -74,7 +81,7 @@
     // outline: 1px solid red;
     display: flex;
     align-items: center;
-    padding:30px 60px;
+    padding:10px 60px;
 
     justify-content: flex-end;
     .navbar{
@@ -127,7 +134,13 @@
 }
 
 @media only screen and(max-width:962px){
-    
+    .logo{
+        display: none;
+    }
+    .logoMobile{
+        display: flex;
+        height: 50px;
+    }
     .navbarTop{
         z-index: 9999;
         position: sticky;
@@ -166,11 +179,13 @@
         opacity: 0;
         visibility: hidden;
     }
-    .navbarSecond{
+    .navbarSecond{  
         z-index: 3;
         transition: all .5s ease;
         // opacity: 0;
         position: fixed;
+        align-items: flex-start;
+        // z-index: 10000;
         padding: 0 0;
         top: 0;
         width: 100%;

@@ -6,14 +6,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ServerProvider } from './Contexts/ServerProvider';
 import IsLoginProvider from './Contexts/IsLoginProvider';
+import BooksProvider from './store/Provider/BooksProvider';
 
 ReactDOM.render(
   <React.StrictMode>
+    <BooksProvider>
     <IsLoginProvider>
     <ServerProvider>
       <App />
     </ServerProvider>
     </IsLoginProvider>
+    </BooksProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

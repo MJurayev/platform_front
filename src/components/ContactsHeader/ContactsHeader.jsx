@@ -12,7 +12,7 @@ export default function ContactsHeader() {
         <div className={st.container}>
             <img src={contactImage} alt=""/>
             <div className={st.info}>
-                <div className={st.title}>Bizning platformamizga xush kelibsiz  platformamizga xush</div>
+                <div className={st.title}>Biz bilan bog'lanishingiz uchun ma'lumotlar</div>
                 <div className={st.phone}><img src={Call} alt=""/> +99894333-33-33</div>
                 <div className={st.email}><img src={EmailIcon} alt=""/>Amirooancb@gmail.comh</div>
                 <div className={st.socialLinks}>

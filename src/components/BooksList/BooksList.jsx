@@ -5,7 +5,9 @@ import { useServer } from '../../Contexts/ServerProvider'
 import axios from 'axios'
 export default function BooksList() {
     const { server } = useServer()
+
     const [books, setBooks] = useState([])
+
     const getBooks=()=>{
         axios.get(`${server}/api/books`, {
             headers:{
@@ -18,6 +20,7 @@ export default function BooksList() {
             console.log(err)
         })
     }
+    
     useEffect(()=>{
         getBooks()
     },[])
@@ -26,7 +29,7 @@ export default function BooksList() {
            {books.map((book, key)=>{
                return (
                 <div key={key} className={st.col}>
-                <BookItem bookInfo={book} />
+                    <BookItem bookInfo={book} />
                 </div>
                )
            }) }
